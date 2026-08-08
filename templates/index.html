@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQBot — NLP-Based FAQ Chatbot</title>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Chat Header -->
+    <header class="chat-header">
+      <div class="bot-info">
+        <div class="bot-avatar">
+          🤖
+          <span class="online-indicator"></span>
+        </div>
+        <div class="bot-details">
+          <h1>FAQBot</h1>
+          <div class="bot-status">
+            <span class="status-dot"></span>
+            <span>Online • Intelligent Assistant</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="icon-btn" title="Toggle Light/Dark Theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button id="adminToggle" class="icon-btn" title="Manage FAQs (Admin)">
+          <i class="fas fa-cog"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Chat Messages Viewport -->
+    <main class="chat-messages" id="chatMessages">
+      
+      <!-- Welcome Message & Suggested Questions -->
+      <div class="welcome-card">
+        <div class="welcome-icon">👋</div>
+        <h2 class="welcome-title">Hi! I'm FAQBot</h2>
+        <p class="welcome-text">Ask me anything about your order, password reset, payment methods, delivery times, or returns!</p>
+        
+        <div class="suggestions-container">
+          <button class="suggestion-chip" data-question="How can I track my order?">
+            <i class="fas fa-truck"></i> Track my order
+          </button>
+          <button class="suggestion-chip" data-question="How can I reset my password?">
+            <i class="fas fa-key"></i> Reset password
+          </button>
+          <button class="suggestion-chip" data-question="What payment methods are supported?">
+            <i class="fas fa-credit-card"></i> Payment methods
+          </button>
+          <button class="suggestion-chip" data-question="How long does delivery take?">
+            <i class="fas fa-clock"></i> Delivery time
+          </button>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Chat Input Form -->
+    <footer class="chat-input-area">
+      <form id="chatForm" class="input-form">
+        <button type="button" id="micBtn" class="mic-btn" title="Voice Input">
+          <i class="fas fa-microphone"></i>
+        </button>
+        
+        <input 
+          type="text" 
+          id="userInput" 
+          class="chat-input" 
+          placeholder="Ask your question here..." 
+          autocomplete="off" 
+          required
+        />
+        
+        <button type="submit" id="sendBtn" class="send-btn" title="Send Question">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+    </footer>
+
+    <!-- Admin Drawer / Modal Overlay -->
+    <div id="adminModal" class="modal-overlay">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3 class="modal-title">
+            <i class="fas fa-database"></i> FAQ Knowledge Base Admin
+          </h3>
+          <button id="closeModal" class="icon-btn">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          
+          <!-- Add / Edit FAQ Form -->
+          <form id="adminForm" class="admin-form">
+            <input type="hidden" id="formFaqId" value="" />
+            
+            <div class="form-group">
+              <label for="faqCategoryInput">Category</label>
+              <input type="text" id="faqCategoryInput" class="form-input" placeholder="e.g. Account & Security, Orders & Tracking" required />
+            </div>
+
+            <div class="form-group">
+              <label for="faqQuestionInput">Question</label>
+              <input type="text" id="faqQuestionInput" class="form-input" placeholder="Enter question..." required />
+            </div>
+
+            <div class="form-group">
+              <label for="faqAnswerInput">Answer</label>
+              <textarea id="faqAnswerInput" class="form-textarea" placeholder="Enter detailed answer..." required></textarea>
+            </div>
+
+            <button type="submit" id="formSubmitBtn" class="btn-primary">
+              <i class="fas fa-plus"></i> Add FAQ
+            </button>
+          </form>
+
+          <!-- Category Filter Bar -->
+          <div style="margin-bottom: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+            <h4 style="font-size: 0.9rem; font-weight: 600;">Existing FAQs</h4>
+            <select id="categoryFilter" class="form-select" style="width: auto; padding: 0.35rem 0.6rem; font-size: 0.8rem;">
+              <option value="ALL">All Categories</option>
+            </select>
+          </div>
+
+          <!-- FAQ Item List Container -->
+          <div id="faqListContainer" class="faq-admin-list">
+            <!-- Dynamically Populated by script.js -->
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Main Application Script -->
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

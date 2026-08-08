@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "category": "Account & Security",
+    "question": "How can I reset my password?",
+    "answer": "You can reset your password by clicking 'Forgot Password' on the login page and following the instructions sent to your registered email."
+  },
+  {
+    "id": 2,
+    "category": "Account & Security",
+    "question": "How do I update my profile information?",
+    "answer": "Go to your Account Settings -> Profile section where you can update your name, email address, phone number, and avatar."
+  },
+  {
+    "id": 3,
+    "category": "Account & Security",
+    "question": "Is two-factor authentication (2FA) supported?",
+    "answer": "Yes! You can enable Two-Factor Authentication under Security Settings for an extra layer of protection using authenticator apps or SMS codes."
+  },
+  {
+    "id": 4,
+    "category": "Orders & Tracking",
+    "question": "How can I track my order?",
+    "answer": "Open 'My Orders' in your account dashboard, select the specific order, and click 'Track Package' to see real-time delivery status."
+  },
+  {
+    "id": 5,
+    "category": "Orders & Tracking",
+    "question": "Can I cancel my order?",
+    "answer": "Orders can be cancelled before they enter the shipping stage. Go to 'My Orders' -> select order -> click 'Cancel Order'."
+  },
+  {
+    "id": 6,
+    "category": "Orders & Tracking",
+    "question": "Can I modify my delivery address after placing an order?",
+    "answer": "Address modifications are possible within 1 hour of placing the order. Please contact our support team immediately or edit via 'My Orders'."
+  },
+  {
+    "id": 7,
+    "category": "Payments & Billing",
+    "question": "What payment methods are supported?",
+    "answer": "We accept major Credit Cards (Visa, MasterCard, Amex), Debit Cards, PayPal, UPI, Apple Pay, Google Pay, and Net Banking."
+  },
+  {
+    "id": 8,
+    "category": "Payments & Billing",
+    "question": "Why was my payment declined?",
+    "answer": "Payment declines can happen due to insufficient funds, incorrect card details, or bank security blocks. Please double-check details or try another card."
+  },
+  {
+    "id": 9,
+    "category": "Payments & Billing",
+    "question": "How do I download my invoice?",
+    "answer": "Invoices can be downloaded from 'My Orders' by clicking the 'Download Invoice' button next to your fulfilled transaction."
+  },
+  {
+    "id": 10,
+    "category": "Shipping & Delivery",
+    "question": "How long does delivery take?",
+    "answer": "Standard delivery takes 3 to 5 business days. Express shipping takes 1 to 2 business days depending on your location."
+  },
+  {
+    "id": 11,
+    "category": "Shipping & Delivery",
+    "question": "Do you ship internationally?",
+    "answer": "Yes, we ship to over 50 countries worldwide. International delivery times range between 7 to 14 business days."
+  },
+  {
+    "id": 12,
+    "category": "Shipping & Delivery",
+    "question": "What are the shipping charges?",
+    "answer": "Standard shipping is free on orders above $50. For orders under $50, a flat standard shipping fee of $4.99 applies."
+  },
+  {
+    "id": 13,
+    "category": "Returns & Refunds",
+    "question": "What is your return policy?",
+    "answer": "We offer a 30-day hassle-free return policy. Products must be unused, in original packaging, with tags intact."
+  },
+  {
+    "id": 14,
+    "category": "Returns & Refunds",
+    "question": "How long does it take to process a refund?",
+    "answer": "Once we receive your returned item, refunds are processed within 3 to 5 business days back to your original payment method."
+  },
+  {
+    "id": 15,
+    "category": "Returns & Refunds",
+    "question": "Who pays for return shipping?",
+    "answer": "Return shipping is completely free for defective or incorrect items. For general returns, a small return label fee of $3.99 is deducted from the refund."
+  },
+  {
+    "id": 16,
+    "category": "Technical Support",
+    "question": "How can I contact customer support?",
+    "answer": "You can reach our customer support team via live chat, email at support@example.com, or call our toll-free line at 1-800-555-0199."
+  },
+  {
+    "id": 17,
+    "category": "Technical Support",
+    "question": "What should I do if the website is not loading properly?",
+    "answer": "Try clearing your browser cache and cookies, or try switching to a private/incognito tab. If issues persist, please notify support."
+  },
+  {
+    "id": 18,
+    "category": "Technical Support",
+    "question": "Do you have a mobile app?",
+    "answer": "Yes! Our official app is available for download on both iOS App Store and Google Play Store."
+  }
+]
